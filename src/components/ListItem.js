@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ItemRating from './ItemRating';
 import ItemDetails from './ItemDetails';
 import { openHoursManage } from '../utils/helper';
@@ -54,4 +55,17 @@ const ListItem = ({
     </a>
   );
 };
+
+ListItem.propTypes = {
+  itemRate: PropTypes.number,
+  reviewCounts: PropTypes.number,
+  name: PropTypes.string,
+  itemCost: PropTypes.string,
+  itemHours: PropTypes.array,
+  yelpURL: PropTypes.string,
+  imageURL: PropTypes.array,
+  itemCategories: PropTypes.array,
+  itemAddress: PropTypes.string,
+};
+
 export default ListItem;

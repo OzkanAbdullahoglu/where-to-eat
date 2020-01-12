@@ -4,11 +4,13 @@ import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
+import PropTypes from 'prop-types';
 
 import ListItem from './ListItem';
 import { LeftPane } from './common/LeftPane';
 import { PanelToggleButton } from './common/PanelToggleButton';
 import { PanelOnlyToggleButton } from './common/PanelOnlyToggleButton';
+import { Tooltip } from './common/Tooltip';
 import { getLeftPanelStatus, mapActions } from '../reducers';
 
 const GET_YELP_DATA = gql`
@@ -92,6 +94,7 @@ const LeftPanel = ({
 
   if (error) return `Error! ${error}`;
   const fetchedData = data.search.business;
+  const itemCount = fetchedData.length;
   setFetchedData(fetchedData);
 
   return (
@@ -134,6 +137,7 @@ const LeftPanel = ({
                     itemCategories={item.categories}
                   />
                 ))}
+                <div className="left-pane-footer">{`Total ${itemCount} items in the list`}</div>
               </div>
             </div>
           </div>
@@ -142,19 +146,29 @@ const LeftPanel = ({
           <PanelToggleButton
             onClick={setTogglePane}
             closed={isLeftPanelStatus.toggleCloseButton}
-          />
-          <span className="tooltip-hide">Collapse side panel</span>
+          >
+            <Tooltip>Collapse side panel</Tooltip>
+          </PanelToggleButton>
         </div>
         <div className="custom-pane-toggle-button-container">
           <PanelOnlyToggleButton
             onClick={setTogglePaneOnly}
             closed={isLeftPanelStatus.toggleCloseButton}
           />
-          <span className="tooltip-hide">Expand side panel</span>
         </div>
       </LeftPane>
     </div>
   );
+};
+
+LeftPanel.propTypes = {
+  lat: PropTypes.number,
+  lng: PropTypes.number,
+  setFetchedData: PropTypes.func,
+  setTogglePane: PropTypes.func,
+  setTogglePaneOnly: PropTypes.func,
+  isLeftPanelStatus: PropTypes.object,
+  userLocationUpdate: PropTypes.func,
 };
 
 const mapStateToProps = (store) => ({

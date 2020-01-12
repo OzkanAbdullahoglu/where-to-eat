@@ -1,13 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import RatingStar from './RatingStar';
-
 
 const ItemRating = ({ rating, reviewCount }) => {
   const createStars = [...Array(5).keys()];
   let starStyle = '';
   return (
     <span>
-      <span className="cards-result-rating" aria-label="4 stars">
+      <span className="cards-result-rating" aria-label={`${rating} stars`}>
         <span className="cards-rating-score">{rating}</span>
         <ol className="cards-rating-stars">
           {createStars.map(
@@ -29,4 +29,10 @@ const ItemRating = ({ rating, reviewCount }) => {
     </span>
   );
 };
+
+ItemRating.propTypes = {
+  rating: PropTypes.number,
+  reviewCount: PropTypes.number,
+};
+
 export default ItemRating;

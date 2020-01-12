@@ -1,5 +1,6 @@
-import React from "react";
-import { getCategoriesTitle } from "../utils/helper";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { getCategoriesTitle } from '../utils/helper';
 
 const ItemDetails = ({ cost, address, categories }) => (
   <div id="item-details">
@@ -12,5 +13,11 @@ const ItemDetails = ({ cost, address, categories }) => (
     <span className="cards-result-location">{address}</span>
   </div>
 );
+
+ItemDetails.propTypes = {
+  cost: PropTypes.string,
+  address: PropTypes.string,
+  categories: PropTypes.array,
+};
 
 export default ItemDetails;

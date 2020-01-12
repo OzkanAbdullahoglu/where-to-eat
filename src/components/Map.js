@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'recompose';
+import PropTypes from 'prop-types';
 
 import SearchMap from './SearchMap';
 import GoogleMapComponent from './GoogleMapComponent';
@@ -89,6 +90,10 @@ class Map extends Component {
     );
   }
 }
+
+Map.propTypes = {
+  isFetchedData: PropTypes.array,
+};
 
 const mapStateToProps = (store) => ({
   isFetchedData: getFetchedData(store),
