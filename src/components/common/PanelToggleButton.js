@@ -14,11 +14,14 @@ export const PanelToggleButton = styled.button`
          border-left: 1px solid #d4d4d4;
          box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
          -webkit-transform: ${(props) =>
-    props.closed === true ? 'scaleX(-1)' : 'scaleX(1)'};
+           props.closed === true ? 'scaleX(-1)' : 'scaleX(1)'};
          transform: ${(props) =>
-    props.closed === true ? 'scaleX(-1)' : 'scaleX(1)'};
+           props.closed === true ? 'scaleX(-1)' : 'scaleX(1)'};
          @media (max-width: 414px) {
-          display: none;
+           display: none;
+         }
+         &:hover {
+           background-color: #fffafb;
          }
        `;
 

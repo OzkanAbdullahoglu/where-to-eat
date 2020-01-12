@@ -16,8 +16,7 @@ export const PanelOnlyToggleButton = styled.button`
          -webkit-transform: scaleX(-1);
          transform: scaleX(-1);
          &:hover {
-           background-color: palevioletred;
-           color: white;
+           background-color: #fffafb;
          }
          @media (min-width: 768px) {
            display: none;
