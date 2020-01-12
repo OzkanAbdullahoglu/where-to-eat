@@ -304,6 +304,14 @@ a:focus {
   left: 100%;
   display: block;
 }
+.left-pane-footer {
+  border-top: 1px solid #DADCE0;
+  background-color: #ecf3f9;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: rgb(47, 155, 226);
+  text-align: center;
+}
 
 .custom-pane-toggle-button-container {
   position: absolute;
@@ -311,12 +319,6 @@ a:focus {
   top: 200px;
   left: 100%;
   display: block;
-}
-
-.pane-collapsed-mode {
-  box-shadow: none;
-  -webkit-transform: translateX(-408px);
-  transform: translateX(-408px);
 }
 
 .tooltip-dark {
@@ -344,16 +346,6 @@ a:focus {
   display: block;
 }
 
-.left-pane-toggle-button-tooltip {
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  margin-left: 8px;
-  line-height: 22px;
-  white-space: nowrap;
-}
 
 .tooltip-hide {
   display: none;
@@ -391,7 +383,7 @@ a:focus {
 }
 
 .cards-result-title {
-  color: #95a5ca;
+  color: #2b6aff;
   font-size: 15px;
   line-height: 16px;
   padding-bottom: 3px;
