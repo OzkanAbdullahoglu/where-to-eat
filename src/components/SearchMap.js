@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Geocode from 'react-geocode';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { SearchBoxContainer } from './common/SearchBoxContainer';
 import { getLeftPanelStatus } from '../reducers';
 
@@ -12,10 +13,6 @@ import { getLeftPanelStatus } from '../reducers';
 Geocode.setApiKey('AIzaSyDt0R1NakICIfNoUjNBjQEU3BlIr_QhtHY');
 
 class SearchMap extends Component {
-  /**
-   * using createRef to manage focus
-   * after component mounted we focus on searchbox firstly
-   */
   componentDidMount() {
     this.getFocusElement.current.focus();
   }
@@ -26,9 +23,15 @@ class SearchMap extends Component {
   componentDidUpdate() {
     this.clearQuery();
   }
-
+  /**
+   * using createRef to manage focus
+   * after component mounted we focus on searchbox firstly
+   */
   getFocusElement = React.createRef();
 
+  /**
+   *  @description clear searchbox content
+   */
   clearQuery = () => (document.getElementById('searchboxinput').value = '');
 
   /**
@@ -119,6 +122,11 @@ class SearchMap extends Component {
     );
   }
 }
+
+SearchMap.propTypes = {
+  isLeftPanelStatus: PropTypes.object,
+  markerLocationTrigger: PropTypes.func,
+};
 
 const mapStateToProps = (store) => ({
   isLeftPanelStatus: getLeftPanelStatus(store),
