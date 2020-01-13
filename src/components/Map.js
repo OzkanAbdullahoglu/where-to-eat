@@ -16,6 +16,16 @@ class Map extends Component {
     zoom: 12,
   };
 
+
+  shouldComponentUpdate(nextProps, nextState) {
+    const { center, zoom } = this.state;
+    return (
+        center !== nextState.center ||
+        zoom !== nextState.zoom ||
+        this.props.isFetchedData !== nextProps.isFetchedData
+    );
+  }
+
   /**
    *  @description updating center of the map by manipulating the state of center
    *  @param {number} newlat- we  are using newLat and newLng to update lat and lng states

@@ -17,6 +17,11 @@ class SearchMap extends Component {
     this.getFocusElement.current.focus();
   }
 
+  shouldComponentUpdate(nextProps) {
+    const { isLeftPanelStatus } = this.props;
+    return (isLeftPanelStatus !== nextProps.isLeftPanelStatus)
+  }
+
   /**
    *  @description after component updated we reset the inquiry inside of the search bar
    */
@@ -32,14 +37,14 @@ class SearchMap extends Component {
   /**
    *  @description clear searchbox content
    */
-  clearQuery = () => (document.getElementById('searchboxinput').value = '');
+  clearQuery = () => (document.getElementById("searchboxinput").value = "");
 
   /**
    *  @description settled a google autocomplete form inside of search bar
    */
   zoomAutocomplete = () => {
     const autoComplete = new google.maps.places.Autocomplete(
-      document.getElementById('searchboxinput')
+      document.getElementById("searchboxinput")
     );
     return autoComplete;
   };
@@ -48,21 +53,21 @@ class SearchMap extends Component {
    *  @description gathering geometrical lat and lng from given location by user
    */
   zoomToArea = () => {
-    const searchInput = document.getElementById('searchboxinput').value;
+    const searchInput = document.getElementById("searchboxinput").value;
 
     // checking If we have query from user
-    if (searchInput === '') {
-      alert('You must enter a place name to get results');
+    if (searchInput === "") {
+      alert("You must enter a place name to get results");
     } else {
       // retrieving lat and lng from given location
       // with markerLocationTrigger updating map center and zoom to the new location
       Geocode.fromAddress(searchInput).then(
-        (response) => {
+        response => {
           const lat = response.results[0].geometry.location.lat;
           const lng = response.results[0].geometry.location.lng;
           this.props.markerLocationTrigger(lat, lng);
         },
-        (error) => {
+        error => {
           alert(
             `Please check your inquiry , server returned following ${error}`
           );
