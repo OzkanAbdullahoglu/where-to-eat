@@ -14,6 +14,6 @@ export const SearchBoxContainer = styled.div`
     props.closed === true ? 'translateX(-408px)' : 'translateX(0px)'};
          transition-property: -webkit-transform, transform, visibility, opacity;
          transition-duration: 200ms;
-         transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+         transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
          visibility: ${(props) => (props.closed === true ? 'hidden' : 'visible')};
        `;
