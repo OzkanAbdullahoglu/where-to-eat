@@ -1,0 +1,506 @@
+
+/* APP MAIN */
+/* ------------------------------ */
+a,
+button,
+h3,
+input,
+ol,
+p,
+ul {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font: inherit;
+  list-style: none;
+  margin: 0;
+  outline: 0;
+  overflow: visible;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.header-buttons {
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 32px;
+  color: #3677f1;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 32px;
+  margin: 8px 0;
+  padding: 0px 12px;
+  border: 1px solid #e6e6e6;
+}
+
+.header-buttons:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+}
+
+.main-container {
+  background: #4285F4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+#map-container {
+  background: #fff;
+  overflow: hidden;
+  width: 100%;
+  z-index: 0;
+  white-space: normal;
+}
+
+.container-element {
+  width: 100%;
+  bottom: 0;
+  background-color: #ede9dd;
+  z-index: 0;
+}
+
+.map-element {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  background-color: black;
+}
+
+#searchbox-container {
+  top: 0;
+  position: absolute;
+  z-index: 4;
+}
+
+.searchbox .searchboxinput,
+.tactile-searchbox-input {
+  color: inherit;
+  font-size: 15px;
+  margin: 0 !important;
+  padding: 0 !important;
+  outline: 0;
+  width: 100%;
+  height: 24px !important;
+  line-height: 24px;
+  vertical-align: top;
+  transition-property: color;
+  transition-duration: 0.3s;
+  border: none;
+}
+
+.searchbox-tooltip {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+  z-index: 1003;
+  white-space: nowrap;
+}
+
+.searchbox-singlebox-root {
+  display: none;
+}
+
+.searchbox-singlebox-root.searchbox-active {
+  display: block;
+}
+
+.searchbox {
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 392px;
+  height: 48px;
+  border-bottom: 1px solid transparent;
+  padding: 12px 104px 11px 24px;
+  transition-property: background, box-shadow;
+  transition-duration: 0.3s;
+}
+
+.searchbox-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2), 0 -1px 0px rgba(0, 0, 0, 0.02);
+}
+
+.searchbox-searchbutton-container {
+  position: absolute;
+  right: 54px;
+  top: 0;
+}
+
+.searchbox-searchbutton {
+  display: block;
+  padding: 12px 15px;
+  cursor: pointer;
+}
+
+.searchbox-searchbutton::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(//maps.gstatic.com/tactile/omnibox/quantum_search_button-20150825-1x.png);
+  background-size: 72px 24px;
+}
+
+.searchbox-searchbutton-container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 10px;
+  border-left: 1px solid #ddd;
+  height: 28px;
+}
+
+.clear-button {
+  padding: 12px 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.clear-button::before {
+  content: '';
+  display: block;
+  background-image: url(//maps.gstatic.com/tactile/omnibox/clear-1x-20150504.png);
+  background-size: 96px 24px;
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+}
+
+.clear-button:hover::before {
+  background-position: -24px 0;
+}
+
+.searchbox-searchbutton:hover::before {
+  background-position: -24px 0;
+}
+
+.left-pane-content {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.scrollable-y {
+  overflow-y: auto;
+}
+
+.left-pane-content-holder {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: left;
+  overflow: visible;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.cards-layout {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.cards-layout-root {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards-searchbox-spacer {
+  height: 65px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+  background-color: rgb(255, 255, 255);
+  height: 65px;
+}
+
+.cards-layout.cards-layout-flex-horizontal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cards-layout.cards-layout-flex-vertical {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.cards-divider {
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.cards-divider-bottom-line {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.cards-layout.cards-scrollbox {
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.cards-result {
+  cursor: pointer;
+  box-sizing: border-box;
+  min-height: 112px;
+  padding: 10px 18px 10px 24px;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none;
+}
+
+.cards-result:hover {
+  background-color: #f5f5f5;
+}
+
+button:focus {
+  outline: 2px outset hsl(199, 97%, 54%);
+}
+
+a:focus {
+  background-color: #f5f5f5;
+}
+
+.left-pane-toggle-button-container {
+  position: absolute;
+  z-index: 0;
+  top: 8px;
+  left: 100%;
+  display: block;
+}
+.left-pane-footer {
+  border-top: 1px solid #DADCE0;
+  background-color: #ecf3f9;
+  padding: 12px 24px;
+  font-size: 14px;
+  color: rgb(47, 155, 226);
+  text-align: center;
+}
+
+.custom-pane-toggle-button-container {
+  position: absolute;
+  z-index: 0;
+  top: 200px;
+  left: 100%;
+  display: block;
+}
+
+.tooltip-dark {
+  display: block;
+  z-index: 100;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  background-color: #21107b;
+  color: #eff0f3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1rem;
+  box-shadow: 0 4px 10px rgba(170, 170, 170, 0.75);
+}
+
+.left-pane-toggle-button {
+  width: 23px;
+  height: 48px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAQAAAAXDMSnAAAAi0lEQVR4AX3JQcqBURQG4O/+9WNG30D3vOfSDTuQsgcZyBakZANSzMVMBme3zsBI5/VMn4ZKLP5ki1E4tYejWpilxVUtzOEUD68odYmXR5BJNp/4zllXD2phllYvamHmirsayUkfJ5ruHzueTldC08kcT5YOY9xYujqQM03XKXuaLmEtNF1e1Nz89gbL+0do6OEwRwAAAABJRU5ErkJggg==) 7px center/7px 10px no-repeat;
+  border-left: 1px solid #D4D4D4;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+
+.tooltip-hide {
+  display: none;
+}
+
+/* LIST ITEM */
+/* ------------------------------ */
+
+.cards-result-content {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cards-result-text-content {
+  color: #ab83cf;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 16px;
+  min-width: 1px;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.cards-result-header {
+  padding-top: 2px;
+}
+
+.cards-result-title-container {
+  padding-right: 10px;
+  display: table-cell;
+  width: 100%;
+  white-space: normal;
+}
+
+.cards-result-title {
+  color: #2b6aff;
+  font-size: 15px;
+  line-height: 16px;
+  padding-bottom: 3px;
+  white-space: normal;
+}
+
+.cards-result-details-container {
+  padding-top: 2px;
+}
+
+.cards-result-opening-hours {
+  white-space: nowrap;
+}
+
+.cards-image-container {
+  display: inline-block;
+  height: 92px;
+  width: 80px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.cards-result-image {
+  background-size: 80px 92px;
+  height: 92px;
+  width: 80px;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+
+/* ITEM RATING - DETAILS */
+/* ------------------------------ */
+
+.cards-rating-score {
+  vertical-align: middle;
+  color: #e7711b;
+  margin-right: 1px;
+}
+
+.cards-rating-stars {
+  vertical-align: middle;
+  display: inline-block;
+  height: 16px;
+  margin-right: 1px;
+  font-size: 0;
+}
+
+.cards-rating-star-half {
+  background-position: -13px 1px !important;
+}
+
+.cards-rating-star-empty {
+  background-position: -25px 1px !important;
+}
+
+.cards-rating-star {
+  background: url(//maps.gstatic.com/tactile/omnibox/star-20130618.png) no-repeat;
+  background-position: 0 1px;
+  background-size: 37px 13px;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+.cards-result-num-ratings {
+  color: #bbb;
+  vertical-align: middle;
+}
+
+.cards-result-cost,
+.cards-result-separator,
+.cards-result-details {
+  vertical-align: middle;
+}
+
+.cards-result-location {
+  display: inline-block;
+}
+
+
+/* MEDIA QUERIES */
+/* ------------------------------ */
+
+@media screen and (min-width: 768px) {
+  .hide-larger-device {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .searchbox {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .searchbox {
+    width: 397px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .searchbox {
+    width: 361px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .searchbox {
+    width: 346px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .searchbox {
+    width: 306px;
+  }
+}
