@@ -17,7 +17,7 @@ export const LeftPane = styled.div`
          transform: ${(props) => setPaneContract(-408, props)};
          transition-property: -webkit-transform, transform, opacity;
          transition-duration: 0.2s;
-         transition-timing-function: linear;
+         transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
          box-shadow: ${(props) =>
     props.closed === true ? 'none' : '0 0 20px rgba(0, 0, 0, 0.3)'};
          background: #fff;
