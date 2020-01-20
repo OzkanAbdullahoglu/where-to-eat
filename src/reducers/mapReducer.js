@@ -43,6 +43,8 @@ export default (state: State = INITIAL_STATE, action: Action) => {
       return {
         ...state,
         togglePane: {
+          toggleSearchBox: action.toggleSearchBox,
+          toggleCloseButton: action.toggleCloseButton,
           toggleLeftPane: action.toggleLeftPane,
         },
       };
@@ -97,6 +99,8 @@ const setTogglePaneOnly = () => (dispatch, getStore) => {
   const isLeftPanelStatus = getLeftPanelStatus(mapStore);
   dispatch({
     type: types.TOGGLE_PANE_ONLY,
+    toggleSearchBox: isLeftPanelStatus.toggleSearchBox,
+    toggleCloseButton: isLeftPanelStatus.toggleCloseButton,
     toggleLeftPane: !isLeftPanelStatus.toggleLeftPane,
   });
 };
