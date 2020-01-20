@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from '../../store';
 import Client from '../../Client';
-import Map from '../main/Map';
+import Map from '../main/Map/Map';
 import './App.css';
 
 const App = () => (
