@@ -7,14 +7,14 @@ import Geocode from 'react-geocode';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { SearchBoxContainer } from '../styled-components/SearchBoxContainer';
+import { SearchBoxContainer } from '../../styled-components/SearchBoxContainer';
 import {
   getLeftPanelStatus,
   mapActions,
   getIsMainToggleButtonStatus,
   getIsAlertModalVisible,
-  getFetchStatus } from '../../reducers';
-import AlertModal from '../view/AlertModal';
+  getFetchStatus } from '../../../reducers';
+import AlertModal from '../../view/AlertModal';
 
 whyDidYouRender(React, {
   onlyLogs: true,
@@ -165,7 +165,7 @@ class SearchMap extends Component {
             close={this.handleCloseAlertModal}
             warning={warning}
           />
-          <SearchBoxContainer closed={isLeftPanelStatus.toggleSearchBox}>
+          <SearchBoxContainer className="search-box-container" closed={isLeftPanelStatus.toggleSearchBox}>
             <div id="searchbox-single-box">
               <div className="searchbox-singlebox-root searchbox-active">
                 <div

@@ -7,13 +7,13 @@ import { gql } from 'apollo-boost';
 import { useQuery } from '@apollo/react-hooks';
 import PropTypes from 'prop-types';
 
-import LeftPanHeader from '../view/LeftPaneHeader';
-import List from '../view/List';
-import { LeftPane } from '../styled-components/LeftPane';
-import { PanelToggleButton } from '../styled-components/PanelToggleButton';
-import { PanelOnlyToggleButton } from '../styled-components/PanelOnlyToggleButton';
-import { Tooltip } from '../styled-components/Tooltip';
-import { getLeftPanelStatus, getIsMainToggleButtonStatus, mapActions, getFetchStatus } from '../../reducers';
+import LeftPanHeader from '../../view/LeftPaneHeader';
+import List from '../../view/List';
+import { LeftPane } from '../../styled-components/LeftPane';
+import { PanelToggleButton } from '../../styled-components/PanelToggleButton';
+import { PanelOnlyToggleButton } from '../../styled-components/PanelOnlyToggleButton';
+import { Tooltip } from '../../styled-components/Tooltip';
+import { getLeftPanelStatus, getIsMainToggleButtonStatus, mapActions, getFetchStatus } from '../../../reducers';
 
 
 const GET_YELP_DATA = gql`

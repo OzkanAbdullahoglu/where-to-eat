@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 
-import SearchMap from './SearchMap';
-import GoogleMapComponent from './GoogleMapComponent';
-import LeftPanel from './LeftPanel';
-import { getFetchedData, getSearchBoxStatus, mapActions } from '../../reducers';
+import SearchMap from '../searchmap/SearchMap';
+import GoogleMapComponent from '../GoogleMapComponent';
+import LeftPanel from '../Leftpanel/LeftPanel';
+import { getFetchedData, getSearchBoxStatus, mapActions } from '../../../reducers';
 
 whyDidYouRender(React, {
   onlyLogs: true,
@@ -17,7 +17,7 @@ whyDidYouRender(React, {
 });
 
 class Map extends Component {
-/* static whyDidYouRender = true;*/
+  /* static whyDidYouRender = true;*/
   state = {
     // default center as a start incase we can't get user location at the begining
     center: { lat: 37.09024, lng: -95.712891 },
