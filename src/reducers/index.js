@@ -3,6 +3,7 @@ import { combineReducers } from 'redux';
 import mapReducer, {
   selectors as mapSelectors,
   actions as mapActions,
+  types as mapTypes,
 } from './mapReducer';
 
 const rootReducer = combineReducers({
@@ -26,6 +27,6 @@ export const getIsAlertModalVisible = (store) =>
 export const getFetchStatus = (store) =>
   mapSelectors.getFetchStatus(store.map);
 
-export { mapActions };
+export { mapActions, mapTypes };
 
 export default rootReducer;
