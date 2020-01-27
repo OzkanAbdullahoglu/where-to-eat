@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Search Box Container Render renders search box container 1`] = `
-.c1 {
+.c0 {
   display: none;
 }
 
-.c1:hover .c0 {
+.sc-AykKC:hover .c0 {
   display: block;
   z-index: 100;
   padding: 2px 8px;
@@ -35,6 +35,6 @@ exports[`Search Box Container Render renders search box container 1`] = `
 }
 
 <span
-  className="c0 c1"
+  className="c0"
 />
 `;
