@@ -4,7 +4,7 @@ import toJson from 'enzyme-to-json';
 import { shallow } from 'enzyme';
 import 'jest-styled-components';
 
-import { SearchBoxContainer } from './SearchBoxContainer';
+import SearchBoxContainer from './SearchBoxContainer';
 
 describe('Search Box Container Render', () => {
   const props = {

@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 
 import LeftPanHeader from '../../view/LeftPaneHeader/LeftPaneHeader';
 import List from '../../view/List/List';
-import { LeftPane } from '../../styled-components/LeftPane/LeftPane';
+import LeftPane from '../../styled-components/LeftPane/LeftPane';
 import PanelToggleButton from '../../styled-components/PanelToggleButton/PanelToggleButton';
 import PanelOnlyToggleButton from '../../styled-components/PaneOnlyToggleButton/PanelOnlyToggleButton';
 import Tooltip from '../../styled-components/Tooltip/Tooltip';

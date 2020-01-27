@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import 'jest-styled-components';
 
-import { LeftPane } from './LeftPane';
+import LeftPane from './LeftPane';
 
 describe('Left Pane Render', () => {
   const props = {

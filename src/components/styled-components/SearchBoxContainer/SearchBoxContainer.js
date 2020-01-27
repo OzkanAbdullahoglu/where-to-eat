@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import styled from 'styled-components';
 
-export const SearchBoxContainer = styled.div`
+const SearchBoxContainer = styled.div`
          position: absolute;
          left: 0px;
          margin: 8px 0 8px 8px;
@@ -18,3 +18,4 @@ export const SearchBoxContainer = styled.div`
          visibility: ${(props) => (props.closed === true ? 'hidden' : 'visible')};
        `;
 
+export default SearchBoxContainer;

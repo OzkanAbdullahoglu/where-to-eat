@@ -5,7 +5,7 @@ const setPaneContract = (conractRange, useProps) => (
   useProps.closed === true ? `translateX(${conractRange}px)` : 'translateX(0px)'
 );
 
-export const LeftPane = styled.div`
+const LeftPane = styled.div`
          width: 408px;
          position: absolute;
          top: 0;
@@ -47,4 +47,4 @@ export const LeftPane = styled.div`
            transform: ${(props) => setPaneContract(-320, props)};
          }
        `;
-
+export default LeftPane;

@@ -6,7 +6,7 @@ import Geocode from 'react-geocode';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import {SearchBoxContainer} from '../../styled-components/SearchBoxContainer/SearchBoxContainer';
+import SearchBoxContainer from '../../styled-components/SearchBoxContainer/SearchBoxContainer';
 import {
   getLeftPanelStatus,
   mapActions,
@@ -81,7 +81,7 @@ class SearchMap extends Component {
       const autoComplete = new google.maps.places.Autocomplete(
         document.getElementById('searchboxinput')
       );
-      console.log(autoComplete);
+
       google.maps.event.addDomListener(document.forms[0], 'keydown', (e) => {
         if (e.which === 13) {
           e.preventDefault();
