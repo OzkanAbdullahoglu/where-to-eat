@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 import styled from 'styled-components';
-import { PanelToggleButton } from '../PanelToggleButton/PanelToggleButton';
+import PanelToggleButton from '../PanelToggleButton/PanelToggleButton';
 
 const Tooltip = styled.span`
          display: none;
