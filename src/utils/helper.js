@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 
 export const openHoursManage = (obj) => {
   let willOpen = '';
