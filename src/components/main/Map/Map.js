@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 
-import SearchMap from '../searchmap/SearchMap';
+import SearchMap from '../search-map/SearchMap';
 import GoogleMapComponent from '../GoogleMapComponent';
-import LeftPanel from '../Leftpanel/LeftPanel';
-import { getFetchedData, getSearchBoxStatus, mapActions } from '../../../reducers';
+import LeftPanel from '../left-panel/LeftPanel';
+import { getFetchedData, mapActions } from '../../../reducers';
 
 whyDidYouRender(React, {
   onlyLogs: true,
@@ -16,7 +16,7 @@ whyDidYouRender(React, {
   diffNameColor: 'aqua',
 });
 
-class Map extends Component {
+export class Map extends Component {
   /* static whyDidYouRender = true;*/
   state = {
     // default center as a start incase we can't get user location at the begining
@@ -124,7 +124,6 @@ Map.propTypes = {
 
 const mapStateToProps = (store) => ({
   isFetchedData: getFetchedData(store),
-  isSearchActivated: getSearchBoxStatus(store),
 });
 
 const withRedux = connect(mapStateToProps, { ...mapActions });
