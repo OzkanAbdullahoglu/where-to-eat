@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box Container Render renders search box container 1`] = `
+.c0 {
+  position: absolute;
+  left: 0px;
+  margin: 8px 0 8px 8px;
+  top: 0px;
+  z-index: 15;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+  -webkit-transform: translateX(-408px);
+  -webkit-transform: translateX(-408px);
+  -ms-transform: translateX(-408px);
+  transform: translateX(-408px);
+  -webkit-transition-property: -webkit-transform,-webkit-transform,visibility,opacity;
+  -webkit-transition-property: -webkit-transform,transform,visibility,opacity;
+  transition-property: -webkit-transform,transform,visibility,opacity;
+  -webkit-transition-duration: 200ms;
+  transition-duration: 200ms;
+  -webkit-transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+  transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+  visibility: hidden;
+}
+
+<div
+  className="c0"
+/>
+`;

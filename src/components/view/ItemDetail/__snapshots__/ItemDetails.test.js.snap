@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Details Component renders Item Detail Component 1`] = `
+<div
+  id="item-details"
+>
+  <span
+    className="cards-result-cost"
+  >
+    $$$$
+  </span>
+  <span
+    className="cards-result-separator"
+  >
+     - 
+  </span>
+  <span
+    className="cards-result-details"
+  >
+    Turkish
+  </span>
+  <span
+    className="cards-result-separator"
+  >
+     - 
+  </span>
+  <span
+    className="cards-result-location"
+  >
+    test address
+  </span>
+</div>
+`;

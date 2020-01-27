@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchMap renders SearchMap component correctly 1`] = `
+<div
+  id="searchbox-container"
+>
+  <Connect(BareAlertModal)
+    close={[Function]}
+    open={false}
+    warning="You must enter a place name to get results"
+  />
+  <styled.div
+    className="search-box-container"
+    closed={false}
+  >
+    <div
+      id="searchbox-single-box"
+    >
+      <div
+        className="searchbox-singlebox-root searchbox-active"
+      >
+        <div
+          className="searchbox searchbox-shadow clear-button-shown"
+          id="search-box"
+          role="search"
+        >
+          <form
+            id="search-box-form"
+          >
+            <input
+              aria-label="Perform a search in Google maps"
+              className="tactile-searchbox-input searchboxinput"
+              id="searchboxinput"
+              name="search for any location"
+              onChange={[Function]}
+              onKeyPress={[Function]}
+              placeholder="Search for restaurants"
+              type="text"
+            />
+          </form>
+          <div
+            className="searchbox-searchbutton-container"
+          >
+            <button
+              aria-label="Search"
+              className="searchbox-searchbutton"
+              onClick={[Function]}
+            />
+            <span
+              aria-hidden="true"
+              className="searchbox-tooltip tooltip-dark tooltip-hide"
+            >
+              Search
+               
+            </span>
+          </div>
+          <button
+            aria-label="Clear search"
+            className="clear-button"
+            onClick={[Function]}
+          />
+        </div>
+      </div>
+    </div>
+  </styled.div>
+</div>
+`;

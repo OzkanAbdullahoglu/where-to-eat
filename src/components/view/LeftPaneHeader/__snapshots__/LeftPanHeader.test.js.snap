@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Left Panel Header Component renders Left Panel Header Component 1`] = `
+<div>
+  <div
+    className="cards-layout cards-layout-flex-horizontal"
+    tabIndex="-1"
+  >
+    <button
+      className="use-my-location header-buttons"
+      onClick={[MockFunction]}
+    >
+      Use my location
+    </button>
+    <button
+      className="set-toggle-pane-only header-buttons hide-larger-device"
+      onClick={[MockFunction]}
+    >
+      Show on map
+    </button>
+  </div>
+  <div
+    className="cards-divider cards-divider-bottom-line"
+  />
+</div>
+`;

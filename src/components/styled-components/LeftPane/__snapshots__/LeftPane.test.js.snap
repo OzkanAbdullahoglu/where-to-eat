@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Left Pane Render renders left pane 1`] = `
+.c0 {
+  width: 408px;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  opacity: 1;
+  height: 0;
+  left: 0;
+  -webkit-transform: translateX(-408px);
+  -webkit-transform: translateX(-408px);
+  -ms-transform: translateX(-408px);
+  transform: translateX(-408px);
+  -webkit-transition-property: -webkit-transform,-webkit-transform,opacity;
+  -webkit-transition-property: -webkit-transform,transform,opacity;
+  transition-property: -webkit-transform,transform,opacity;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+  transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+  box-shadow: none;
+  background: #fff;
+}
+
+@media (max-width:414px) {
+  .c0 {
+    width: 414px;
+    -webkit-transform: translateX(-414px);
+    -webkit-transform: translateX(-414px);
+    -ms-transform: translateX(-414px);
+    transform: translateX(-414px);
+  }
+}
+
+@media (max-width:411px) {
+  .c0 {
+    width: 411px;
+    -webkit-transform: translateX(-411px);
+    -webkit-transform: translateX(-411px);
+    -ms-transform: translateX(-411px);
+    transform: translateX(-411px);
+  }
+}
+
+@media (max-width:375px) {
+  .c0 {
+    width: 375px;
+    -webkit-transform: translateX(-375px);
+    -webkit-transform: translateX(-375px);
+    -ms-transform: translateX(-375px);
+    transform: translateX(-375px);
+  }
+}
+
+@media (max-width:360px) {
+  .c0 {
+    width: 360px;
+    -webkit-transform: translateX(-360px);
+    -webkit-transform: translateX(-360px);
+    -ms-transform: translateX(-360px);
+    transform: translateX(-360px);
+  }
+}
+
+@media (max-width:320px) {
+  .c0 {
+    width: 320px;
+    -webkit-transform: translateX(-320px);
+    -webkit-transform: translateX(-320px);
+    -ms-transform: translateX(-320px);
+    transform: translateX(-320px);
+  }
+}
+
+<div
+  className="c0"
+/>
+`;

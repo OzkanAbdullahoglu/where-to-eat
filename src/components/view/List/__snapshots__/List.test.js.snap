@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Component renders List Component 1`] = `
+<div
+  className="cards-layout cards-scrollbox scrollable-y cards-layout-flex-vertical"
+  tabIndex="-1"
+>
+  <ListItem
+    imageURL={
+      Array [
+        "https://s3-media2.fl.yelpcdn.com/bphoto/BIHWiUEsQRukg-tccQ8H-w/o.jpg",
+      ]
+    }
+    itemAddress="test address heading test address heading test address city"
+    itemCategories={
+      Array [
+        Object {
+          "title": "Turkish",
+        },
+      ]
+    }
+    itemCost="$$$$$"
+    itemHours={
+      Array [
+        Object {
+          "open": Array [
+            Object {
+              "day": 0,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 1,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 2,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 3,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 4,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 5,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+            Object {
+              "day": 6,
+              "end": "2200",
+              "is_overnight": false,
+              "start": "1200",
+            },
+          ],
+        },
+      ]
+    }
+    itemRate={4}
+    key="123456789test"
+    keyTest="123456789test"
+    name="test name"
+    reviewCounts={123}
+    yelpURL="https://www.yelp.com/biz/uluda%C4%9F-kebap%C3%A7%C4%B1s%C4%B1-cemal-ve-cemil-usta-istanbul?adjust_creative=lQpxUARWc1tWB0NFQoQQZQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_graphql&utm_source=lQpxUARWc1tWB0NFQoQQZQ"
+  />
+</div>
+`;

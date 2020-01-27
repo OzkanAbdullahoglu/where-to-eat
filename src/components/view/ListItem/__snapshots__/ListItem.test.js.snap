@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Item Component renders List Component 1`] = `
+<a
+  href="test yelp url"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <div
+    className="cards-result"
+  >
+    <div
+      className="cards-result-content"
+    >
+      <div
+        className="cards-result-text-content"
+      >
+        <div
+          className="cards-result-header"
+        >
+          <div
+            className="cards-result-title-container"
+          >
+            <h3
+              className="cards-result-title"
+            >
+              <span>
+                test-name
+              </span>
+            </h3>
+            <ItemRating
+              rating={5}
+              reviewCount={123}
+            />
+          </div>
+        </div>
+        <div
+          className="cards-result-details-container"
+        >
+          <ItemDetails
+            address="test address"
+            categories={
+              Array [
+                Object {
+                  "title": "Test title",
+                },
+              ]
+            }
+            cost="$"
+          />
+        </div>
+        <div
+          className="cards-result-opening-hours"
+        >
+          Opens at 12:00
+        </div>
+      </div>
+      <div
+        className="cards-image-container"
+      >
+        <div
+          className="cards-result-image"
+          style={
+            Object {
+              "backgroundImage": "url(test url), url(https://via.placeholder.com/80x92.png/ffdede/304368?text=NO+PHOTO)",
+            }
+          }
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="cards-divider-bottom-line"
+  />
+</a>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rating Star Component renders Rating Star Component 1`] = `
+<li
+  className="cards-rating-star cards-rating-star-half"
+/>
+`;

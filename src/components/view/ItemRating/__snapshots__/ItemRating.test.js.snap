@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Rating Component renders Item Rating Component 1`] = `
+<span>
+  <span
+    aria-label="4.5 stars"
+    className="cards-result-rating"
+  >
+    <span
+      className="cards-rating-score"
+    >
+      4.5
+    </span>
+    <ol
+      className="cards-rating-stars"
+    >
+      <RatingStar
+        key="0"
+        starStyle=""
+      />
+      <RatingStar
+        key="1"
+        starStyle=""
+      />
+      <RatingStar
+        key="2"
+        starStyle=""
+      />
+      <RatingStar
+        key="3"
+        starStyle=""
+      />
+      <RatingStar
+        key="4"
+        starStyle="-half"
+      />
+    </ol>
+  </span>
+  <span
+    className="cards-result-num-ratings"
+  >
+    133 reviews
+  </span>
+</span>
+`;

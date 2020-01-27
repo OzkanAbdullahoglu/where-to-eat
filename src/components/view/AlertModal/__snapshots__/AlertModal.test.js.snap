@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AlertModal Component renders Alert Modal Component 1`] = `
+<div>
+  <WithStyles(ForwardRef(Dialog))
+    aria-describedby="alert-dialog-description"
+    aria-labelledby="alert-dialog-title"
+    open={false}
+  >
+    <WithStyles(ForwardRef(DialogTitle))
+      id="alert-dialog-title"
+    >
+      Input is missing!
+    </WithStyles(ForwardRef(DialogTitle))>
+    <WithStyles(ForwardRef(DialogContent))>
+      <WithStyles(ForwardRef(DialogContentText))
+        id="alert-dialog-description"
+      >
+        Test Warning Phrase
+      </WithStyles(ForwardRef(DialogContentText))>
+    </WithStyles(ForwardRef(DialogContent))>
+    <WithStyles(ForwardRef(DialogActions))>
+      <WithStyles(ForwardRef(Button))
+        color="primary"
+        onClick={[MockFunction]}
+      >
+        Close
+      </WithStyles(ForwardRef(Button))>
+    </WithStyles(ForwardRef(DialogActions))>
+  </WithStyles(ForwardRef(Dialog))>
+</div>
+`;

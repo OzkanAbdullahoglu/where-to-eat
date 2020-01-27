@@ -1,3 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Map renders map component correctly 1`] = `ShallowWrapper {}`;
+exports[`Map renders map component correctly 1`] = `
+<div
+  className="main-container"
+  role="main"
+>
+  <div
+    aria-label="Google Map Container"
+    id="map-container"
+    role="application"
+  >
+    <Connect(BareLeftPanel)
+      lat={37.09024}
+      lng={-95.712891}
+      userLocationUpdate={[Function]}
+    />
+    <Connect(withProps(lifecycle(withScriptjs(withGoogleMap(Component)))))
+      center={
+        Object {
+          "lat": 37.09024,
+          "lng": -95.712891,
+        }
+      }
+      zoom={12}
+    />
+    <Connect(SearchMap)
+      markerLocationTrigger={[Function]}
+    />
+  </div>
+</div>
+`;
