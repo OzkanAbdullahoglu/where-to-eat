@@ -112,7 +112,6 @@ export const BareLeftPanel = ({
 
   if (error) return `Error! ${error}`;
   if (data) {
-    console.log(data);
     const fetchedData = data.search.business;
     const itemCount = fetchedData.length;
     setFetchedData(fetchedData);
