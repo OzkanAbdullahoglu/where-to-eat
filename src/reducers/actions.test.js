@@ -21,7 +21,7 @@ describe('return initial state', () => {
   };
   const version = { number: '0.0.1' };
 
-  describe('action dispatcher to manipulate initial state', () => {
+  describe('action dispatchers to manipulate initial state', () => {
     let store;
     const initialState = { map, version };
     beforeEach(() => {
