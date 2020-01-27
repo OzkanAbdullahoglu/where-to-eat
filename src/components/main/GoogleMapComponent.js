@@ -31,6 +31,12 @@ const GoogleMapComponent = compose(
         `${error} Error Occured while trying to render google maps API Please check your credentials`
       );
     },
+    shouldComponentUpdate(nextProps) {
+      const { center, zoom, isFetchedData } = this.props;
+      return (center !== nextProps.center ||
+        zoom !== nextProps.zoom ||
+        isFetchedData !== nextProps.isFetchedData);
+    },
   }),
   withScriptjs,
   withGoogleMap
@@ -79,11 +85,6 @@ const GoogleMapComponent = compose(
             lng: getUpdatedLoc.coordinates.longitude,
           }}
           key={getUpdatedLoc.id}
-          animation={
-            props.markerUniqueKey === getUpdatedLoc.id &&
-            props.markerClicked === true &&
-            google.maps.Animation.BOUNCE
-          }
           onClick={() => markerLinkRedirection(getUpdatedLoc.url)}
         />
       ))}
