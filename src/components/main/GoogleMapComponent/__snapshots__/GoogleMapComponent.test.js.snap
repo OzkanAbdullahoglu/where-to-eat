@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GoogleMapComponent renders GoogleMapComponent component correctly 1`] = `
+<withProps(lifecycle(withScriptjs(withGoogleMap(Component))))
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <lifecycle(withScriptjs(withGoogleMap(Component)))
+    containerElement={
+      <div
+        className="container-element"
+      />
+    }
+    googleMapURL="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyDt0R1NakICIfNoUjNBjQEU3BlIr_QhtHY&v=3.exp"
+    loadingElement={
+      <div
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
+      />
+    }
+    mapElement={
+      <div
+        className="map-element"
+      />
+    }
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <withScriptjs(withGoogleMap(Component))
+      containerElement={
+        <div
+          className="container-element"
+        />
+      }
+      googleMapURL="https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyDt0R1NakICIfNoUjNBjQEU3BlIr_QhtHY&v=3.exp"
+      loadingElement={
+        <div
+          style={
+            Object {
+              "height": "100%",
+            }
+          }
+        />
+      }
+      mapElement={
+        <div
+          className="map-element"
+        />
+      }
+      store={
+        Object {
+          "dispatch": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+          Symbol(observable): [Function],
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
+      />
+    </withScriptjs(withGoogleMap(Component))>
+  </lifecycle(withScriptjs(withGoogleMap(Component)))>
+</withProps(lifecycle(withScriptjs(withGoogleMap(Component))))>
+`;

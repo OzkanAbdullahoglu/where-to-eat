@@ -10,14 +10,14 @@ import {
 } from 'react-google-maps';
 import { compose, withProps, lifecycle } from 'recompose';
 import { connect } from 'react-redux';
-import { getFetchedData } from '../../reducers';
+import { getFetchedData } from '../../../reducers';
 
 let filteredFetchedData;
 /**
  *  @description creating GoogleMap API structure and implement it to the DOM
  *  react-google-maps is used for implementation
  */
-const GoogleMapComponent = compose(
+export const GoogleMapComponent = compose(
   withProps({
     googleMapURL:
       'https://maps.googleapis.com/maps/api/js?libraries=geometry,places&key=AIzaSyDt0R1NakICIfNoUjNBjQEU3BlIr_QhtHY&v=3.exp',
