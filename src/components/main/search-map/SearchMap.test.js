@@ -2,13 +2,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import createGoogleMapsMock from 'jest-google-maps-mock';
 import SearchMap from './SearchMap';
 import { storeFactory } from '../../../utils/testUtils';
 
 describe('SearchMap', () => {
   const store = storeFactory();
-  const mockZoomToArea = jest.fn();
   const searchMap = shallow(<SearchMap store={store} />)
     .dive()
     .dive();
@@ -32,50 +30,36 @@ describe('SearchMap', () => {
   });
 
   describe('SearchMap Events', () => {
-    let googleMaps;
-    /* const setupGoogleMock = () => {
-      /*** Mock Google Maps JavaScript API
-      const google = {
-        maps: {
-          places: {
-            AutocompleteService: () => { },
-            PlacesServiceStatus: {
-              INVALID_REQUEST: 'INVALID_REQUEST',
-              NOT_FOUND: 'NOT_FOUND',
-              OK: 'OK',
-              OVER_QUERY_LIMIT: 'OVER_QUERY_LIMIT',
-              REQUEST_DENIED: 'REQUEST_DENIED',
-              UNKNOWN_ERROR: 'UNKNOWN_ERROR',
-              ZERO_RESULTS: 'ZERO_RESULTS',
-            },
-          },
-          Geocoder: { },
-          GeocoderStatus: {
-            ERROR: 'ERROR',
-            INVALID_REQUEST: 'INVALID_REQUEST',
-            OK: 'OK',
-            OVER_QUERY_LIMIT: 'OVER_QUERY_LIMIT',
-            REQUEST_DENIED: 'REQUEST_DENIED',
-            UNKNOWN_ERROR: 'UNKNOWN_ERROR',
-            ZERO_RESULTS: 'ZERO_RESULTS',
-          },
-        },
-      };
-      global.window.google = google;
-    };
-    beforeEach(() => {
-      googleMaps = createGoogleMapsMock();
-      console.log(googleMaps);
-    });*/
-
-    it(' has an input field that user can type in', () => {
+    it('has events that triggers proper functions', () => {
       let zoomAutocompleteMock = jest.fn();
+      let preZoomMock = jest.fn();
+      let captureKeyPressMock = jest.fn();
+      let clearQueryMock = jest.fn();
       zoomAutocompleteMock = searchMap.instance().zoomAutocomplete;
-
-      console.log(searchMap.instance());
+      preZoomMock = searchMap.instance().preZoom;
+      captureKeyPressMock = searchMap.instance().captureKeyPress;
+      clearQueryMock = searchMap.instance().clearQuery;
+      let events;
+      document.addEventListener = jest.fn((event, cb) => {
+        events[event] = cb;
+      });
       searchMap.find('input').simulate('change', () => {
         const zoomAutocompleteCallCount = zoomAutocompleteMock.mock.calls.length;
+        const preZoomCallCount = preZoomMock.mock.calls.length;
         expect(zoomAutocompleteCallCount).toBe(1);
+        expect(preZoomCallCount).toBe(1);
+      });
+      searchMap.find('input').simulate('keypress', () => {
+        const captureKeyPressCallCount = captureKeyPressMock.mock.calls.length;
+        expect(captureKeyPressCallCount).toBe(1);
+      });
+      searchMap.find('.searchbox-searchbutton').simulate('click', () => {
+        const preZoomCallCount = preZoomMock.mock.calls.length;
+        expect(preZoomCallCount).toBe(1);
+      });
+      searchMap.find('.clear-button').simulate('click', () => {
+        const clearQueryMockCount = clearQueryMock.mock.calls.length;
+        expect(clearQueryMockCount).toBe(1);
       });
     });
   });

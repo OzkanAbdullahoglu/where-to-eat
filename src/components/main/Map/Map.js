@@ -6,7 +6,7 @@ import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 
 import SearchMap from '../search-map/SearchMap';
-import GoogleMapComponent from '../GoogleMapComponent';
+import GoogleMapComponent from '../GoogleMapComponent/GoogleMapComponent';
 import LeftPanel from '../left-panel/LeftPanel';
 import { getFetchedData, mapActions } from '../../../reducers';
 
